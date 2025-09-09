@@ -8,7 +8,7 @@ Print the Unicode value of each character in "Java" using codePointAt().
 
 Compare two strings "Hello" and "hello" using equals() and equalsIgnoreCase().
 
-Searching & Checking (6–10)
+
 
 Check if "programming" contains "gram" using contains().
 
