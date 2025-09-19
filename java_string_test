@@ -1,0 +1,67 @@
+What is the difference between String, StringBuilder, and StringBuffer in Java?
+
+Why are Java Strings immutable?
+
+How does the == operator differ from .equals() when comparing Strings?
+
+Write a Java program to reverse a string without using StringBuilder or StringBuffer.
+
+How can you check if a string is a palindrome in Java?
+
+Write a Java program to count the number of vowels and consonants in a string.
+
+What is the difference between substring() and subSequence() methods?
+
+Write a program to check if two strings are anagrams of each other.
+
+How does intern() method work in Java Strings?
+
+Write a program to find the first non-repeated character in a string.
+
+
+
+Demonstrate the use of the following methods with examples:
+
+charAt(), length(), indexOf(), lastIndexOf(), replace(), split(), trim().
+
+Write a program to convert a string into a character array and print each character.
+
+How can you convert a string to uppercase without using toUpperCase()?
+
+Write a program to remove all spaces from a string.
+
+Explain the difference between String.valueOf() and toString().
+
+
+
+What is StringBuffer and why is it mutable?
+
+Difference between StringBuffer and StringBuilder.
+
+Write a program to reverse a string using StringBuffer.
+
+Demonstrate the use of append(), insert(), delete(), replace() in StringBuffer.
+
+Write a program to check if two StringBuffer objects contain the same sequence of characters.
+
+Explain how capacity() and ensureCapacity() work in StringBuffer.
+
+Write a program to delete vowels from a given string using StringBuffer.
+
+How does substring() in StringBuffer differ from String?
+
+Write a Java program to replace all occurrences of a word in a StringBuffer.
+
+Write a program to demonstrate setCharAt() and charAt() methods in StringBuffer.
+
+
+
+Why would you use StringBuffer instead of String in multithreaded applications?
+
+Convert a String to StringBuffer and vice versa with an example.
+
+Write a program that takes a sentence and reverses the order of words using StringBuffer.
+
+Demonstrate string concatenation performance using + operator vs StringBuffer.
+
+Write a program that reads a string and removes all duplicate characters using StringBuffer.
