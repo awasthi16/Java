@@ -23,3 +23,116 @@ public class Main {
         myCar.displayDetails();
     }
 }
+
+
+// ------------------------------------------------------------------constructor--------------------
+class Student {
+    String name;
+    int age;
+
+    // Default constructor
+    Student() {
+        name = "Unknown";
+        age = 18;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student(); // Calls default constructor
+        s1.display();
+    }
+}
+
+
+
+
+
+// --------------------------------------------
+
+class Student {
+    String name;
+    int age;
+
+    // Parameterized constructor
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student("Alice", 20);
+        s1.display();
+    }
+}
+
+--------------------------------------------------
+ class Student {
+    String name;
+    int age;
+
+    // Default constructor
+    Student() {
+        name = "Not Provided";
+        age = 0;
+    }
+
+    // Parameterized constructor
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student("Bob", 22);
+
+        s1.display();
+        s2.display();
+    }
+}
+------------------------------------------
+ class Student {
+    String name;
+    int age;
+
+    Student() {
+        this("Default", 18); // Calls another constructor
+    }
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student(); // Calls no-arg, which calls parameterized
+        Student s2 = new Student("David", 25);
+
+        s1.display();
+        s2.display();
+    }
+}
+
