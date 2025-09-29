@@ -135,4 +135,35 @@ public class Main {
         s2.display();
     }
 }
+------------------------------------------------
+ class Student {
+    int id;
+    String name;
+
+    // Parameterized constructor
+    Student(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    // Copy constructor
+    Student(Student s) {
+        this.id = s.id;
+        this.name = s.name;
+    }
+
+    void display() {
+        System.out.println("ID: " + id + ", Name: " + name);
+    }
+}
+
+public class CopyConstructorDemo {
+    public static void main(String[] args) {
+        Student s1 = new Student(101, "Durgesh");
+        Student s2 = new Student(s1); // Using copy constructor
+
+        s1.display();
+        s2.display();
+    }
+}
 
