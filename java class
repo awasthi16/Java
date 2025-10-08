@@ -1,0 +1,217 @@
+1. Defining a Class and Creating Objects
+
+A class is a blueprint or template for creating objects.
+An object is an instance of a class that holds data (fields) and behavior (methods).
+
+Example:
+class Student {
+    // Fields (Instance Variables)
+    String name;
+    int age;
+
+    // Method
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of Student
+        Student s1 = new Student();
+        s1.name = "Rahul";
+        s1.age = 21;
+        s1.display();
+    }
+}
+
+2. Instance Variables and Methods
+
+Instance variables belong to an object (each object has its own copy).
+
+Instance methods operate on instance variables.
+
+class Car {
+    String color; // Instance variable
+
+    void setColor(String c) {
+        color = c; // Instance method
+    }
+
+    void showColor() {
+        System.out.println("Car color: " + color);
+    }
+}
+
+3. Access Modifiers
+
+Access modifiers define visibility or scope of class members.
+
+Modifier	Access Level	Description
+public	Everywhere	Accessible from any class
+private	Same class only	Hidden from other classes
+protected	Same package + subclasses	For inheritance
+default (no keyword)	Same package	Package-private
+class Example {
+    public int a = 10;
+    private int b = 20;
+    protected int c = 30;
+    int d = 40; // default
+
+    void show() {
+        System.out.println(a + " " + b + " " + c + " " + d);
+    }
+}
+
+4. this Keyword
+
+this refers to the current object — useful when instance variables and parameters have the same name.
+
+class Employee {
+    String name;
+    int id;
+
+    Employee(String name, int id) {
+        this.name = name; // resolves ambiguity
+        this.id = id;
+    }
+
+    void display() {
+        System.out.println(name + " : " + id);
+    }
+}
+
+5. Constructors
+
+Constructors are special methods used to initialize objects.
+They have the same name as the class and no return type.
+
+Types:
+
+Default Constructor – Provided by Java if no constructor is defined.
+
+Parameterized Constructor – Accepts parameters.
+
+Copy Constructor – Copies data from another object.
+
+class Box {
+    int length;
+
+    // Default constructor
+    Box() {
+        length = 10;
+    }
+
+    // Parameterized constructor
+    Box(int l) {
+        length = l;
+    }
+
+    // Copy constructor
+    Box(Box b) {
+        this.length = b.length;
+    }
+
+    void display() {
+        System.out.println("Length: " + length);
+    }
+}
+
+6. Static Variables, Methods, and Blocks
+
+Static variables: Shared by all objects of a class.
+
+Static methods: Can be called without creating an object.
+
+Static block: Executes once when the class is loaded.
+
+class Counter {
+    static int count = 0; // static variable
+
+    Counter() {
+        count++;
+    }
+
+    static void showCount() { // static method
+        System.out.println("Objects created: " + count);
+    }
+
+    static { // static block
+        System.out.println("Class loaded into memory");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        new Counter();
+        new Counter();
+        Counter.showCount();
+    }
+}
+
+7. Garbage Collection
+
+Java automatically manages memory using Garbage Collection (GC).
+Objects with no reference are automatically deleted.
+
+class Demo {
+    public void finalize() {
+        System.out.println("Object destroyed");
+    }
+
+    public static void main(String[] args) {
+        Demo d1 = new Demo();
+        d1 = null;
+        System.gc(); // Suggests JVM to run Garbage Collector
+    }
+}
+
+Practical Topics
+1. Creating a Class with Multiple Methods
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int subtract(int a, int b) {
+        return a - b;
+    }
+
+    int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Add: " + calc.add(10, 5));
+        System.out.println("Sub: " + calc.subtract(10, 5));
+        System.out.println("Mul: " + calc.multiply(10, 5));
+    }
+}
+
+2. Using Constructors and Static Members
+class Student {
+    String name;
+    int rollNo;
+    static String college = "ABC College"; // static member
+
+    Student(String name, int rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+
+    void display() {
+        System.out.println(rollNo + " " + name + " " + college);
+    }
+}
+
+public class TestStatic {
+    public static void main(String[] args) {
+        Student s1 = new Student("Ravi", 101);
+        Student s2 = new Student("Priya", 102);
+        s1.display();
+        s2.display();
+    }
+}
