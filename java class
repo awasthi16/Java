@@ -25,6 +25,32 @@ public class Main {
     }
 }
 
+
+------------------------------------------------bank-------------------------
+
+
+public class BankAccount {
+    private class AccountDetails {
+        private String accountNumber = "12345";
+        private double balance = 5000.0;
+
+        void printDetails() {
+            System.out.println("Account: " + accountNumber);
+            System.out.println("Balance: $" + balance);
+        }
+    }
+
+    public void showDetails() {
+        AccountDetails details = new AccountDetails();
+        details.printDetails();
+    }
+
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.showDetails();
+    }
+}
+
 2. Instance Variables and Methods
 
 Instance variables belong to an object (each object has its own copy).
